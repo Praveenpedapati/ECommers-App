@@ -13,10 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ECommerceApp">
         <activity
-            android:name=".OnBoardingActivity">
+            android:name=".activities.OnBoardingActivity">
         </activity>
         <activity
-            android:name=".RegistrationActivity"
+            android:name=".activities.RegistrationActivity"
             android:exported="true">
 
             <intent-filter>
@@ -25,8 +25,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.MainActivity"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
