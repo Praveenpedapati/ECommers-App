@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -23,6 +24,8 @@ public class RegistrationActivity extends AppCompatActivity {
     EditText name, email, password;
     private FirebaseAuth auth;
 
+    SharedPreferences sharedPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +41,20 @@ public class RegistrationActivity extends AppCompatActivity {
         name = findViewById(R.id.name);
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
+
+        sharedPreferences = getSharedPreferences("onBoardingScreen", MODE_PRIVATE);
+
+        boolean isFirstTime = sharedPreferences.getBoolean("firstTime", true);
+
+        if(isFirstTime){
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putBoolean("firstTime", false);
+            editor.commit();
+
+            Intent intent = new Intent(RegistrationActivity.this, OnBoardingActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 
     public void signup(View view) {

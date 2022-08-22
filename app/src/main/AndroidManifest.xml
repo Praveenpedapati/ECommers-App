@@ -13,11 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ECommerceApp">
         <activity
-            android:name=".OnBoardingActivity"
-            android:exported="false" />
+            android:name=".OnBoardingActivity">
+        </activity>
         <activity
             android:name=".RegistrationActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
