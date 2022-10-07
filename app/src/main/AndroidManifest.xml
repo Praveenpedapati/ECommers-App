@@ -13,12 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ECommerceApp">
         <activity
-            android:name=".activities.OnBoardingActivity">
-        </activity>
+            android:name=".activities.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DetailedActivity"
+            android:exported="false" />
+        <activity android:name=".activities.OnBoardingActivity" />
         <activity
             android:name=".activities.RegistrationActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,7 +29,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.LoginActivity" />
-        <activity android:name=".activities.MainActivity"></activity>
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.ShowAllActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
