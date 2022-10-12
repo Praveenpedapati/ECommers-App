@@ -28,6 +28,10 @@ android {
     }
 }
 
+//repositories {
+//    mavenCentral()
+//}
+
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.4.2'
@@ -48,4 +52,7 @@ dependencies {
 
     implementation 'com.github.bumptech.glide:glide:4.13.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+
+    //Razorpay payment method
+    implementation 'com.razorpay:checkout:1.6.25'
 }

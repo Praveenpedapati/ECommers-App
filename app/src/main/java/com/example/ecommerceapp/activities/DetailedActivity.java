@@ -2,7 +2,9 @@ package com.example.ecommerceapp.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,6 +33,8 @@ public class DetailedActivity extends AppCompatActivity {
     TextView rating, name, description, price, quantity;
     Button addToCart, buyNow;
     ImageView addItems, removeItems;
+
+    Toolbar toolbar;
     int totalQuantity = 1;
     int totalPrice = 0;
 
@@ -49,6 +53,17 @@ public class DetailedActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed);
+
+        toolbar = findViewById(R.id.detailed_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         firestore = FirebaseFirestore.getInstance();
         auth = FirebaseAuth.getInstance();
@@ -69,7 +84,7 @@ public class DetailedActivity extends AppCompatActivity {
         description = findViewById(R.id.detailed_desc);
         price = findViewById(R.id.detailed_price);
         addToCart = findViewById(R.id.add_to_cart);
-        buyNow = findViewById(R.id.but_now);
+        buyNow = findViewById(R.id.buy_now);
         addItems = findViewById(R.id.add_item);
         removeItems = findViewById(R.id.remove_item);
 
@@ -108,7 +123,26 @@ public class DetailedActivity extends AppCompatActivity {
 
             totalPrice = showAllModel.getPrice() * totalQuantity;
         }
+        //Buy Now
+        buyNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DetailedActivity.this, AddressActivity.class);
 
+                if (newProductsModel != null){
+                    intent.putExtra("item",newProductsModel);
+                }
+                if (popularProductsModel != null){
+                    intent.putExtra("item", popularProductsModel);
+                }
+                if (showAllModel != null){
+                    intent.putExtra("item", showAllModel);
+                }
+                startActivity(intent);
+            }
+        });
+
+        //Add to cart
         addToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -169,7 +203,7 @@ public class DetailedActivity extends AppCompatActivity {
         cartMap.put("productName",name.getText().toString());
         cartMap.put("productPrice",price.getText().toString());
         cartMap.put("currentTime",saveCurrentTime);
-        cartMap.put("currentDat",saveCurrentDate);
+        cartMap.put("currentDate",saveCurrentDate);
         cartMap.put("totalQuantity",quantity.getText().toString());
         cartMap.put("totalPrice",totalPrice);
 

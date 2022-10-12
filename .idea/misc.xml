@@ -9,15 +9,21 @@
         <entry key="..\:/ECommerceApp/app/src/main/res/drawable/ic_baseline_lock_person_24.xml" value="0.1" />
         <entry key="..\:/ECommerceApp/app/src/main/res/drawable/ic_person.xml" value="0.1105" />
         <entry key="..\:/ECommerceApp/app/src/main/res/drawable/ic_shopping_cart.xml" value="0.1" />
-        <entry key="..\:/ECommerceApp/app/src/main/res/layout/activity_detailed.xml" value="0.14130434782608695" />
+        <entry key="..\:/ECommerceApp/app/src/main/res/layout/activity_add_address.xml" value="0.14130434782608695" />
+        <entry key="..\:/ECommerceApp/app/src/main/res/layout/activity_address.xml" value="0.14130434782608695" />
+        <entry key="..\:/ECommerceApp/app/src/main/res/layout/activity_cart.xml" value="0.14130434782608695" />
+        <entry key="..\:/ECommerceApp/app/src/main/res/layout/activity_detailed.xml" value="0.1" />
         <entry key="..\:/ECommerceApp/app/src/main/res/layout/activity_login.xml" value="0.14130434782608695" />
         <entry key="..\:/ECommerceApp/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/ECommerceApp/app/src/main/res/layout/activity_main2.xml" value="0.14130434782608695" />
         <entry key="..\:/ECommerceApp/app/src/main/res/layout/activity_on_boarding.xml" value="0.14130434782608695" />
+        <entry key="..\:/ECommerceApp/app/src/main/res/layout/activity_payment.xml" value="0.14130434782608695" />
         <entry key="..\:/ECommerceApp/app/src/main/res/layout/activity_registration.xml" value="0.2413127413127413" />
-        <entry key="..\:/ECommerceApp/app/src/main/res/layout/activity_show_all.xml" value="0.1" />
+        <entry key="..\:/ECommerceApp/app/src/main/res/layout/activity_show_all.xml" value="0.16666666666666666" />
+        <entry key="..\:/ECommerceApp/app/src/main/res/layout/address_item.xml" value="0.14130434782608695" />
         <entry key="..\:/ECommerceApp/app/src/main/res/layout/category_list.xml" value="0.6" />
         <entry key="..\:/ECommerceApp/app/src/main/res/layout/fragment_home.xml" value="0.12" />
+        <entry key="..\:/ECommerceApp/app/src/main/res/layout/my_cart_item.xml" value="0.22" />
         <entry key="..\:/ECommerceApp/app/src/main/res/layout/new_products.xml" value="0.5" />
         <entry key="..\:/ECommerceApp/app/src/main/res/layout/popular_items.xml" value="0.14130434782608695" />
         <entry key="..\:/ECommerceApp/app/src/main/res/layout/show_all_item.xml" value="0.14130434782608695" />
